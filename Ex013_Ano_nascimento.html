@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano de nascimento</title>
+</head>
+<body>
+    <h1>Ano de nascimento</h1>
+    <p>Desenvolva um programa que recebe do usuário nome completo e ano de nascimento que seja entre 1922 e 2021. <br>A partir dessas informações, o sistema mostrará o nome do usuário e a idade que completou, ou completará, no ano atual (2022).</p>
+
+   
+    <input type="text" name="nome" id="nome">
+
+    <input type="number" name="ano" id="ano">   
+
+    <input type="button" value="Cadastrar" onclick="cadastrar()">
+    <div id="resposta"></div>
+
+    <script>
+        function cadastrar() {
+            try{
+                var anoAtual = 2022
+                var nome = document.querySelector("#nome").value
+                var ano = Number(document.querySelector("#ano").value)
+                var resultado = document.querySelector("#resposta")
+                var idade
+
+                if (ano >= 1922 && ano <= 2021) {
+                    idade = anoAtual - ano
+                } else {
+                    throw new Error ("Ano invávido. Tente novamente")
+                }
+
+                resposta.innerHTML = `O nome do usuário é ${nome} e o seu ano de nascimento é: ${idade}` 
+
+            }   catch (error){
+                    resposta.innerHTML = `Erro, tente novamente` 
+            }
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>
