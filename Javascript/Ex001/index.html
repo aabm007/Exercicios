@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01 Javascript</title>
+</head>
+<body>
+    <section>
+        <h1>CADASTRO</h1>
+        <div class="name">
+          <label for="name">Nome: </label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="wage">
+          <label for="wage">Salário: </label>
+          <input type="number" name="wage" id="wage">
+        </div>
+        <div class="age">
+          <label for="age">Idade: </label>
+          <input type="number" name="age" id="age">
+        </div>
+        <div class="degree">
+          <p>Possui diploma: </p>
+          <input type="radio" name="degree" id="yes" value="Sim">
+          <label for="yes">Sim</label>
+          <input type="radio" name="degree" id="no" value="Não">
+          <label for="no">Não</label>
+        </div>
+        <div class="btn">
+          <input type="button" value="Cadastrar" onclick="register()">
+        </div>
+    </section>  
+      <div id="res"></div>
+      <script src="index.js"></script>
+    
+</body>
+</html>
